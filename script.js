@@ -24,33 +24,11 @@
 //   }
 // }
 
-// defined alements & array
-let saveBttn = $(".saveBtn");
-let containerEl = $(".container-lg");
-let schedule9am = $("#9AM");
-let schedule10am = $("#10AM");
-let schedule11am = $("#11AM");
-let schedule12pm = $("#12PM");
-let schedule1pm = $("#1PM");
-let schedule2pm = $("#2PM");
-let schedule3pm = $("#3PM");
-let schedule4pm = $("#4PM");
-let schedule5pm = $("#5PM");
-
-let scheduleArray = [
-  schedule9am,
-  schedule10am,
-  schedule11am,
-  schedule12pm,
-  schedule1pm,
-  schedule2pm,
-  schedule3pm,
-  schedule4pm,
-  schedule5pm,
-];
-
-updateDate();
-setInterval(updateDate, 1000);
+//function for updating the time on the webpage
+let updateTime = function (){
+  document.getElementById("currentDay").innerHTML = moment().format("MMMM Do YYYY, h:mm:ss a");
+};
+setInterval(updateTime, 1000);
 // render schedule saved in local storage
 
 
