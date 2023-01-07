@@ -17,3 +17,5 @@ This is a day planner app that I created using moment.js and JQuery. When the us
 ## Installation
 
 Open your default browser with the following link: 
+
+https://hannahsvaughan.github.io/simple-calendar-app/
