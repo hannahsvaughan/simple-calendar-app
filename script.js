@@ -3,26 +3,26 @@
 // in the html.
 
 // function for updating the time on the webpage
-function updateDate () {
-  let today = moment();
+// function updateDate () {
+//   let today = moment();
 
-  $("#currentDay").text(today.format("MMM Do YY"));
+//   $("#currentDay").text(today.format("MMMM Do YYYY, h:mm:ss a"));
 
-  // colors the past, present, and future time blocks
-  let now = moment().format("kk");
-  for (let i=0; i < scheduleArray.length; i++) {
-    scheduleArray[i].removeClass("future past present");
+//   // colors the past, present, and future time blocks
+//   let now = moment().format("kk");
+//   for (let i=0; i < scheduleArray.length; i++) {
+//     scheduleArray[i].removeClass("future past present");
 
-    if (now > scheduleArray[i].data("hour")) {
-      scheduleArray[i].addClass("past");
+//     if (now > scheduleArray[i].data("hour")) {
+//       scheduleArray[i].addClass("past");
 
-    } else if (now === scheduleArray[i].attr("data-hour")) {
-      scheduleArray[i].addClass("present");
-    } else {
-      scheduleArray[i].addClass("future");
-    }
-  }
-}
+//     } else if (now === scheduleArray[i].attr("data-hour")) {
+//       scheduleArray[i].addClass("present");
+//     } else {
+//       scheduleArray[i].addClass("future");
+//     }
+//   }
+// }
 
 // defined alements & array
 let saveBttn = $(".saveBtn");
@@ -50,8 +50,10 @@ let scheduleArray = [
 ];
 
 updateDate();
-
+setInterval(updateDate, 1000);
 // render schedule saved in local storage
+
+
 
 // function for clicks 
 

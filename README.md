@@ -1,2 +1,2 @@
 # simple-calendar-app
-A day planner using Day.js and JQuery!
+A day planner using moment.js and JQuery!
